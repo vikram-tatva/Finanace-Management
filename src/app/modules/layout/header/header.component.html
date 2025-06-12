@@ -1,0 +1,152 @@
+<mat-sidenav-container class="sidenav-container" autosize>
+  <mat-sidenav
+    #drawer
+    [opened]="true"
+    [mode]="isScreenSmall ? 'push' : 'side'"
+    class="customClass"
+  >
+    <div class="sidebar-header">
+      <div [ngClass]="">
+        <div class="d-flex" [ngClass]="{ 'flex-column': drawer.opened }">
+          <div>
+            <img
+              src="https://webapp.fastbudget.app/static/images/app_icon_64.png"
+              alt="App Icon"
+              height="32"
+              width="32"
+              class="app-icon me-3"
+            />
+            <span class="app-name" *ngIf="isNamesVisible">Fast Budget</span>
+          </div>
+          <div></div>
+        </div>
+        <span class="toolbar-spacer"></span>
+      </div>
+
+      <img
+        src="https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100226.jpg?t=st=1719307608~exp=1719311208~hmac=4e79181f30fc24f65705ef3cc89ba91e5eea04a962302da2667301a1bd803750&w=826"
+        alt="Profile Image"
+        class="profile-image"
+        *ngIf="isNamesVisible"
+      />
+      <div class="user-info">
+        <span class="user-name" *ngIf="isNamesVisible">{{firstName}}</span>
+      </div>
+    </div>
+   
+   
+    <mat-nav-list>
+      <a
+        mat-list-item
+        [routerLink]="['/admin']"
+        routerLinkActive="router-link-active"
+      >
+        <div class="d-flex align-items-center text-white">
+          <mat-icon class="me-3">dashboard</mat-icon>
+          <span *ngIf="isNamesVisible">Dashboard</span>
+        </div>
+      </a>
+      
+   
+      <a
+        mat-list-item
+        [routerLink]="['/admin/transactionData']"
+        routerLinkActive="router-link-active"
+      >
+        <div class="d-flex align-items-center text-white">
+          <mat-icon class="me-3">format_list_bulleted</mat-icon>
+          <span *ngIf="isNamesVisible">Transactions</span>
+        </div>
+      </a>
+      <a mat-list-item [routerLink]="['/admin/addExpenses']">
+        <div class="d-flex align-items-center text-white">
+          <mat-icon class="me-3">currency_exchange</mat-icon>
+          <span *ngIf="isNamesVisible">Expenses/Income</span>
+        </div>
+      </a>
+      <a mat-list-item [routerLink]="['/admin/accounts']">
+        <div class="d-flex align-items-center text-white">
+          <mat-icon class="me-3">account_balance</mat-icon>
+          <span *ngIf="isNamesVisible">Accounts</span>
+        </div>
+      </a>
+      <!-- <a mat-list-item [routerLink]="['/incomes']">
+        <div class="d-flex align-items-center">
+          <mat-icon class="me-3">account_balance_wallet</mat-icon>
+          <span *ngIf="isNamesVisible">Incomes</span>
+        </div>
+      </a> -->
+      <a mat-list-item [routerLink]="['/admin/category']">
+        <div class="d-flex align-items-center text-white">
+          <mat-icon class="me-3">category</mat-icon>
+          <span *ngIf="isNamesVisible">Category</span>
+        </div>
+      </a>
+      <a mat-list-item [routerLink]="['/admin/calenders']">
+        <div class="d-flex align-items-center text-white">
+          <mat-icon class="me-3">free_cancellation</mat-icon>
+          <span *ngIf="isNamesVisible">Calenders</span>
+        </div>
+      </a>
+     <!-- <a mat-list-item [routerLink]="['/transactionData']">
+        <div class="d-flex align-items-center text-white">
+          <mat-icon class="me-3">free_cancellation</mat-icon>
+          <span *ngIf="isNamesVisible">ShowTransaction</span>
+        </div>
+      </a> -->
+     
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="sticky" style="background-color: #ecf0f4;">
+    <mat-toolbar class="top-nav-toolbar bg-white ">
+      @if (!isScreenSmall) {
+
+      <button mat-icon-button (click)="toggleNames()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      } @else {
+
+      <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      }
+      
+      <span class="spacer"></span>
+        <!-- <button mat-icon-button *ngIf="!isScreenSmall">
+          <mat-icon>search</mat-icon>
+        </button>
+        <button mat-icon-button *ngIf="!isScreenSmall">
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
+        <button mat-icon-button *ngIf="!isScreenSmall">
+          <mat-icon>bar_chart</mat-icon>
+        </button>
+        <button mat-icon-button *ngIf="!isScreenSmall">
+          <mat-icon>chat</mat-icon>
+          <span class="badge">7</span>
+        </button>
+        <mat-menu #langMenu="matMenu" *ngIf="!isScreenSmall">
+          <button mat-menu-item>English</button>
+          <button mat-menu-item>Spanish</button>
+        </mat-menu> -->
+
+      <mat-menu #profileMenu="matMenu">
+        <button mat-menu-item (click)="logOutUser()">Logout</button>
+      </mat-menu>
+      <button
+        mat-button
+        [matMenuTriggerFor]="profileMenu"
+        *ngIf="!isScreenSmall"
+      >
+        <img
+          src="https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100226.jpg?t=st=1719307608~exp=1719311208~hmac=4e79181f30fc24f65705ef3cc89ba91e5eea04a962302da2667301a1bd803750&w=826"
+          alt="Profile Image"
+          class="profile-image"
+        />
+        {{firstName}}
+      </button>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,33 @@
+
+<div class="d-flex justify-content-center mt-3">
+  <h1>Calendar</h1>
+</div>
+<div class="container-fluid">
+  @defer (when dataIsLoad) {
+  <div class="bg-white mt-3 p-3"> 
+
+      
+      <div class="d-flex ">
+      <mat-icon class="text-success" (click)="applyFilter('income')">brightness_1</mat-icon>
+      <span class="d-flex fw-bold align-items-center">Income</span>
+      <mat-icon class="text-danger" (click)="applyFilter('expense')">brightness_1</mat-icon>
+      <span class="d-flex fw-bold align-items-center">Expenses</span>
+      <mat-icon class="text-primary" (click)="applyFilter('both')">brightness_1</mat-icon>
+      <span class="d-flex fw-bold align-items-center">Both</span>
+    </div>
+    <full-calendar [options]="calendarOptions"></full-calendar>
+  </div>
+  }
+    @placeholder () {
+      <ngx-skeleton-loader appearance="line" count="8"/>
+    }
+    @loading {
+      <ngx-skeleton-loader appearance="line" count="8"/>
+      
+    }
+  </div>
+  <div class="line-progress-bar" [class.show-progress]="showLinebar" [class.hide-progress]="!showLinebar"></div>
+<div class="loader-container" *ngIf="isLoading">
+    <div class="loader">
+    </div>
+</div>

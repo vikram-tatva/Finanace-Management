@@ -1,0 +1,362 @@
+{
+  "expenses": [
+    {
+      "type": "Expense",
+      "date": "2024-06-11",
+      "account": "2",
+      "category": "11cf",
+      "amount": 500,
+      "userId": "76aa",
+      "id": "e026"
+    },
+    {
+      "id": "ab62",
+      "type": "expense",
+      "date": "2024-06-04",
+      "account": "2",
+      "category": "be0d",
+      "amount": 100,
+      "userId": "76aa"
+    },
+    {
+      "id": "4b9a",
+      "type": "expense",
+      "date": "2024-06-04",
+      "account": "2",
+      "category": "30",
+      "amount": 100,
+      "userId": "76aa"
+    },
+    {
+      "id": "c1eb",
+      "type": "expense",
+      "date": "2024-07-03",
+      "account": "aebf",
+      "category": "83ec",
+      "amount": 1,
+      "userId": "3caa"
+    },
+    {
+      "id": "0677",
+      "type": "expense",
+      "date": "2024-07-01",
+      "account": "aebf",
+      "category": "83ec",
+      "amount": 1,
+      "userId": "3caa"
+    },
+    {
+      "id": "bc23",
+      "type": "expense",
+      "date": "2024-07-09",
+      "account": "aebf",
+      "category": "11cf",
+      "amount": 10,
+      "userId": "3caa"
+    },
+    {
+      "id": "f882",
+      "type": "expense",
+      "date": "2024-07-01",
+      "account": "a364",
+      "category": "eae0",
+      "amount": 100,
+      "userId": "6ab6"
+    },
+    {
+      "id": "c3ab",
+      "type": "expense",
+      "date": "2024-07-09",
+      "account": "9411",
+      "category": "37ce",
+      "amount": 100,
+      "userId": "ba79"
+    },
+    {
+      "id": "40ae",
+      "type": "expense",
+      "date": "2024-07-04",
+      "account": "9411",
+      "category": "37ce",
+      "amount": 100,
+      "userId": "ba79"
+    },
+    {
+      "id": "e9f8",
+      "type": "expense",
+      "date": "2024-07-04",
+      "account": "9411",
+      "category": "d130",
+      "amount": 10,
+      "userId": "ba79"
+    },
+    {
+      "id": "b929",
+      "type": "expense",
+      "date": "2024-07-01",
+      "account": "1",
+      "category": "29",
+      "amount": 10,
+      "userId": "76aa"
+    },
+    {
+      "type": "Expense",
+      "date": "2024-07-03",
+      "account": "1",
+      "category": "30",
+      "amount": 10,
+      "userId": "76aa",
+      "id": "2ca7"
+    },
+    {
+      "id": "e407",
+      "type": "expense",
+      "date": "2024-07-14",
+      "account": "2",
+      "category": "83ec",
+      "amount": 100,
+      "userId": "76aa"
+    }
+  ],
+  "PaymentType": [
+    {
+      "id": "1",
+      "name": "Crediter",
+      "balnce": 1288,
+      "userId": "76aa"
+    },
+    {
+      "id": "2",
+      "name": "Debit",
+      "balnce": 4630,
+      "userId": "76aa"
+    },
+    {
+      "id": "3",
+      "name": "Cash",
+      "balnce": 5000,
+      "userId": "76aa"
+    },
+    {
+      "id": "aebf",
+      "name": "Default Account",
+      "balnce": 1098,
+      "userId": "3caa"
+    },
+    {
+      "id": "0271",
+      "name": "good",
+      "balnce": 100,
+      "userId": "3caa"
+    },
+    {
+      "id": "a364",
+      "name": "Default Account",
+      "balnce": 900,
+      "userId": "6ab6"
+    },
+    {
+      "id": "9411",
+      "name": "cash",
+      "balnce": 900,
+      "userId": "ba79"
+    }
+  ],
+  "income": [
+    {
+      "id": "181c",
+      "date": "2024-06-06",
+      "account": "1",
+      "category": "3c1a",
+      "amount": 100,
+      "userId": "76aa"
+    },
+    {
+      "type": "Income",
+      "date": "2024-06-06",
+      "account": "1",
+      "category": "3c1a",
+      "amount": 410,
+      "id": "dc04",
+      "userId": "76aa"
+    },
+    {
+      "id": "de68",
+      "date": "2024-07-15T18:30:00.000Z",
+      "account": "aebf",
+      "category": "3c1a",
+      "amount": 100,
+      "userId": "3caa"
+    },
+    {
+      "id": "a544",
+      "date": "2024-07-02T18:30:00.000Z",
+      "account": "aebf",
+      "category": "3c1a",
+      "amount": 10,
+      "userId": "3caa"
+    },
+    {
+      "id": "ae4a",
+      "date": "2024-07-09",
+      "account": "9411",
+      "category": "4933",
+      "amount": 100,
+      "userId": "ba79"
+    },
+    {
+      "id": "b0c5",
+      "type": "income",
+      "date": "2024-07-03",
+      "account": "9411",
+      "category": "4933",
+      "amount": 10,
+      "userId": "ba79"
+    },
+    {
+      "id": "b7ff",
+      "type": "income",
+      "date": "2024-07-01",
+      "account": "1",
+      "category": "3c1a",
+      "amount": 10,
+      "userId": "76aa"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Income",
+      "type": "income",
+      "isOpen": true
+    },
+    {
+      "id": "2",
+      "name": "Expenses",
+      "type": "expense",
+      "isOpen": true
+    }
+  ],
+  "subcategories": [
+    {
+      "id": "29",
+      "name": "Travelsers",
+      "categoryId": "2",
+      "userId": "76aa"
+    },
+    {
+      "id": "30",
+      "name": "Other (Expenses)",
+      "categoryId": "2",
+      "userId": "76aa"
+    },
+    {
+      "id": "83ec",
+      "name": "Clothing",
+      "categoryId": "2",
+      "userId": "76aa"
+    },
+    {
+      "id": "be0d",
+      "name": "Shoes",
+      "categoryId": "2",
+      "userId": "76aa"
+    },
+    {
+      "id": "11cf",
+      "name": "Gifts",
+      "categoryId": "2",
+      "userId": "76aa"
+    },
+    {
+      "id": "dccd",
+      "name": "Fuel",
+      "categoryId": "2",
+      "userId": "76aa"
+    },
+    {
+      "id": "9ff5",
+      "name": "Entertainment ",
+      "categoryId": "2",
+      "userId": "76aa"
+    },
+    {
+      "id": "c7c3",
+      "name": "foods",
+      "categoryId": "2",
+      "userId": "3caa"
+    },
+    {
+      "id": "6de3",
+      "name": "hospital",
+      "categoryId": "2",
+      "userId": "76aa"
+    },
+    {
+      "id": "159a",
+      "name": "hospital",
+      "categoryId": "1",
+      "userId": "6ab6"
+    },
+    {
+      "id": "eae0",
+      "name": "incharge",
+      "categoryId": "2",
+      "userId": "6ab6"
+    },
+    {
+      "id": "37ce",
+      "name": "cash",
+      "categoryId": "2",
+      "userId": "ba79"
+    },
+    {
+      "id": "2d71",
+      "name": "loan",
+      "categoryId": "1",
+      "userId": "ba79"
+    },
+    {
+      "id": "f5e9",
+      "name": "cash",
+      "categoryId": "1",
+      "userId": "76aa"
+    },
+    {
+      "id": "2758",
+      "name": "car",
+      "categoryId": "1",
+      "userId": "76aa"
+    }
+  ],
+  "registration": [
+    {
+      "id": "76aa",
+      "firstName": "mjunav",
+      "lastName": "popa",
+      "email": "jayesh@gmail.com",
+      "password": "123@Abcabca"
+    },
+    {
+      "id": "3caa",
+      "firstName": "munavvar",
+      "lastName": "popatiya",
+      "email": "kunj@gmail.com",
+      "password": "123456789"
+    },
+    {
+      "id": "6ab6",
+      "firstName": "yash",
+      "lastName": "patel",
+      "email": "yash@gmail.com",
+      "password": "123@ABCabc"
+    },
+    {
+      "id": "ba79",
+      "firstName": "rahul",
+      "lastName": "shah",
+      "email": "rahul@gmail.com",
+      "password": "123@ABCabc"
+    }
+  ]
+}

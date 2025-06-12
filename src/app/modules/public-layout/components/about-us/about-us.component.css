@@ -1,0 +1,83 @@
+.about-us-page {
+    font-family: Arial, sans-serif;
+  }
+  
+  .mission-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .mission-content h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+  
+  .mission-content p {
+    font-size: 18px;
+  }
+  
+  .team-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .team-section h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+  
+  .team-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .team-card {
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .values-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .values-section h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+  
+  .values-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .value-card {
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .value-icon {
+    font-size: 48px;
+    color: #3A9DD7;
+    margin-bottom: 10px;
+  }
+  
+  .value-card h3 {
+    margin: 10px 0;
+    font-size: 24px;
+  }
+  
+  .value-card p {
+    font-size: 16px;
+    color: #666;
+  }
+  

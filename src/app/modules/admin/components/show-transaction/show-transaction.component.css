@@ -1,0 +1,80 @@
+.main-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  .table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+  }
+  
+  .table-hover tbody tr:hover {
+    color: #495057;
+    background-color: rgba(0, 0, 0, 0.075);
+  }
+  
+  button {
+    margin-right: 5px;
+  }
+  
+  .mat-button {
+    font-size: 0.875rem;
+    line-height: 1.75;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.02857em;
+    border-radius: 4px;
+    padding: 0 16px;
+    min-width: 64px;
+  }
+  .type-income {
+    background-color: #1dd1a1; /* Green for income */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.type-expense {
+    background-color: #ff6b6b; /* Red for expense */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #17a2b8;
+  color: #fff;
+}
+
+button[type="submit"]:hover {
+  background-color: #138f9e;
+}
+
+button[type="button"] {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+button[type="button"]:hover {
+  background-color: #5a6268;
+}

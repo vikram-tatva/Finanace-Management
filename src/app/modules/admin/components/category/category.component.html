@@ -1,0 +1,68 @@
+<div class="p-3 text-center">
+  <h1>Add Category</h1>
+</div>
+
+<div class=" container-fluid ">
+  @defer (when dataIsLoad) {
+
+    <div class="bg-white p-4 rounded">
+      <form [formGroup]="searchForm" class="d-flex align-items-center justify-content-between px-4 py-2">
+        <mat-form-field appearance="outline" class=" mr-3 mt-3">
+          <mat-label>Search SubCategory</mat-label>
+          <input matInput placeholder="Search" formControlName="filterText">
+        </mat-form-field>
+        <button mat-fab color="primary" (click)="openDialog()">
+          <mat-icon>add</mat-icon>
+        </button>
+    </form>
+    <div class="table-responsive mt-3">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Category</th>
+            <th>Subcategory</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+          <tbody>
+            @if (displayedSubcategories.length>0) {
+
+              @for (subcategory of displayedSubcategories; track $index) {
+                
+                <tr>
+                  <td>{{ subcategory.id }}</td>
+                  <td>{{ subcategory.categoryName }}</td>
+                  <td>{{ subcategory.subcategoryName }}</td>
+                  <td>
+                    <button mat-button color="primary" (click)="updateCategory(subcategory.id)">Edit</button>
+                    <button mat-button color="warn" (click)="deleteSubcategory(subcategory.id)">Delete</button>
+                  </td>
+                </tr>
+              }
+              }@else {
+                <h1>Data Is Not Found</h1>
+              }
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="line-progress-bar" [class.show-progress]="showLinebar" [class.hide-progress]="!showLinebar"></div>
+<div class="loader-container" *ngIf="isLoading">
+    <div class="loader">
+    </div>
+</div>
+  }
+  @placeholder () {
+    <ngx-skeleton-loader appearance="line" count="8"/>
+  }
+  @loading {
+    <ngx-skeleton-loader appearance="line" count="8"/>
+
+  }
+</div>
+  <ng-template #loadingSkeleton>
+    <ngx-skeleton-loader appearance="line" count="8"></ngx-skeleton-loader>
+  </ng-template>
+  

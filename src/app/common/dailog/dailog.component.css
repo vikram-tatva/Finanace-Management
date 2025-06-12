@@ -1,0 +1,44 @@
+.dialog-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-field {
+    margin-bottom: 16px;
+  }
+  
+  .dialog-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+  }
+  
+
+  button[type="submit"] {
+ 
+    background-color: #17a2b8;
+   color: #fff;
+ }
+ button[type="submit"]:hover {
+   background-color: #138f9e;
+ }
+ 
+ button[type="button"] {
+   background-color: #6c757d;
+   color: #fff;
+ }
+ 
+ button[type="button"]:hover {
+   background-color: #5a6268;
+ }
+ button[type="reset"] {
+   background-color: #6c757d;
+   color: #fff;
+ }
+ 
+ button[type="reset"]:hover {
+   background-color: #5a6268;
+ }button[type="submit"]:disabled {
+   background-color: #a6d5dd; /* Color for disabled submit button */
+   color: #d8e3e6; /* Text color for disabled submit button */
+ }

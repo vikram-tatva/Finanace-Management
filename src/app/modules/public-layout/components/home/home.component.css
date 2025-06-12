@@ -1,0 +1,140 @@
+.landing-page {
+    font-family: Arial, sans-serif;
+  }
+  
+  .hero-section {
+    background: url('https://i.pinimg.com/736x/b6/99/b7/b699b77d8dc2b0882147066672a2475d.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-content p {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .feature-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .feature-card {
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .feature-icon {
+    font-size: 48px;
+    color: #3A9DD7;
+    margin-bottom: 10px;
+  }
+  
+  .feature-content h3 {
+    margin: 10px 0;
+    font-size: 24px;
+  }
+  
+  .feature-content p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .tips-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .tips-section h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+  
+  .tips-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .tips-section ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 16px;
+  }
+  
+  .tips-section li {
+    margin-bottom: 10px;
+  }
+  
+  .testimonials-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .testimonials-section h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+  
+  .testimonial-card {
+    margin: 10px auto;
+    padding: 20px;
+    max-width: 500px;
+  }
+  
+  .testimonial-card p {
+    margin: 10px 0;
+  }
+  
+  .cta-section {
+    padding: 40px 20px;
+    background-color: #3A9DD7;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .cta-section h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+  
+  .cta-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  button[type="submit"] {
+    background-color: #17a2b8;
+    color: #fff;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #138f9e;
+  }
+  
+  button[type="button"] {
+    background-color: #6c757d;
+    color: #fff;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #5a6268;
+  }button[type="submit"]:disabled {
+    background-color: #a6d5dd; /* Color for disabled submit button */
+    color: #d8e3e6; /* Text color for disabled submit button */
+  }

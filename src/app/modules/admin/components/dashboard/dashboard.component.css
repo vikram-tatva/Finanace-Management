@@ -1,0 +1,155 @@
+.recent-transactions {
+    font-family: 'Arial, sans-serif';
+    padding: 16px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .transactions .transaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .transactions .transaction .icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .transactions .transaction .details {
+    flex: 1;
+    margin-left: 12p  x;
+  }
+  
+  .transactions .transaction .details .name {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .transactions .transaction .details .date {
+    color: #757575;
+  }
+  
+  .transactions .transaction .amount {
+    font-weight: bold;
+  }
+  
+  .transactions .transaction .amount.negative {
+    color: #ff0000;
+  }
+  .credit-card {
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .card-content {
+    margin-top: 16px;
+  }
+  
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 1.2em;
+  }
+  
+  .amount {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .negative {
+    color: #e53935;
+  }
+  
+  .progress-percent {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+    margin-top: 8px;
+  }
+  .success {
+    color: green;
+  }
+  
+  .negative {
+    color: red;
+  }
+  .text-center{
+    color: #343a40;
+  }
+  .report-summary {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.summary-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  display: flex;
+  flex: 1;
+  margin-right: 20px;
+  padding: 20px;
+  align-items: center;
+}
+
+.summary-content {
+  flex: 1;
+}
+
+.summary-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+}
+
+a {
+  color: #6f42c1;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.font-weight-medium{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600
+}

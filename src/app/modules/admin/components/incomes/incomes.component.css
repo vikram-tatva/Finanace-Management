@@ -1,0 +1,71 @@
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-label {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+  }
+  
+  button {
+    margin-right: 10px;
+  }
+  
+  button[type="submit"] {
+    background-color: #17a2b8;
+    color: #fff;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #138f9e;
+  }
+  
+  button[type="button"] {
+    background-color: #6c757d;
+    color: #fff;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #5a6268;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .mat-icon {
+    vertical-align: middle;
+  }
+  
+  .expense-row {
+    display: flex;
+    align-items: center;
+  }
+  
+  .expense-row .col {
+    flex: 1;
+    padding-right: 10px;
+  }
+  
+  .expense-row .col:last-child {
+    padding-right: 0;
+  }
+  
+  .expense-row .delete-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  button[type="submit"]:disabled {
+    background-color: #a6d5dd; /* Color for disabled submit button */
+    color: #d8e3e6; /* Text color for disabled submit button */
+  }

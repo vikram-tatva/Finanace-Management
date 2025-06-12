@@ -1,0 +1,95 @@
+<div class="d-flex justify-content-center mt-3">
+    <h1>Transactions</h1>
+  </div>
+<div class=" container-fluid ">
+    @defer (when dataIsLoad) {
+    <div class="bg-white p-4 rounded">
+
+
+        <form [formGroup]="filterForm" class="d-flex mb-4 gap-3 justify-content-between">
+      <mat-form-field appearance="outline" class="">
+        <mat-date-range-input formGroupName="dateRange" [rangePicker]="picker">
+          <input matStartDate formControlName="start" placeholder="Start date">
+          <input matEndDate formControlName="end" placeholder="End date">
+        </mat-date-range-input>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker>
+          <mat-date-range-picker-actions>
+            <button mat-button matDateRangePickerCancel (click)="clearDateRange()">Cancel</button>
+            <button mat-raised-button matDateRangePickerApply>Apply</button>
+          </mat-date-range-picker-actions>
+        </mat-date-range-picker>
+        <mat-error *ngIf="filterForm.get('dateRange.start').hasError('matStartDateInvalid')">Invalid start date</mat-error>
+        <mat-error *ngIf="filterForm.get('dateRange.end').hasError('matEndDateInvalid')">Invalid end date</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="">
+        <mat-label>Search Transaction</mat-label>
+        <input matInput formControlName="searchQuery">
+      </mat-form-field>
+    </form>
+    
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Date</th>
+          <th>Type</th>
+          <th>Category</th>
+          <th>Amount</th>
+          <th>Account</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        @if (paginatedData.length!=0) {
+
+        @for (transaction of paginatedData; track $index) {
+        <tr >
+          <td>{{ transaction.id }}</td>
+          <td>{{ transaction.date }}</td>
+          <td>
+            <span [ngClass]="{
+                'type-income': transaction.type === 'Income',
+                'type-expense': transaction.type === 'Expense'
+            }">
+              {{ transaction.type }}
+            </span>
+          </td>
+          <td>{{ transaction.category }}</td>
+          <td>{{ transaction.amount }}</td>
+          <td>{{ transaction.account }}</td>
+          <td>
+            <button mat-button color="primary"  (click)="editElement(transaction)">Edit</button>
+            <button mat-button color="warn" (click)="deleteElement(transaction)">Delete</button>
+          </td>
+        </tr>
+    }
+  }
+ 
+@else {
+  <h1>No Data Found</h1>
+}
+      </tbody>
+    </table>
+    <mat-paginator [length]="totalItems"
+                   [pageSize]="pageSize"
+                   [pageSizeOptions]="[5, 10, 20]"
+                   (page)="onPageChange($event)">
+    </mat-paginator>
+</div>
+}
+
+@placeholder () {
+    <ngx-skeleton-loader appearance="line" count="8"/>
+  }
+  @loading {
+    <ngx-skeleton-loader appearance="line" count="8"/>
+  
+  }
+
+  </div>
+  <div class="line-progress-bar" [class.show-progress]="showLinebar" [class.hide-progress]="!showLinebar"></div>
+  <div class="loader-container" *ngIf="isLoading">
+      <div class="loader">
+      </div>
+  </div>

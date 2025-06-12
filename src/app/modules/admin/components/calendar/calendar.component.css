@@ -1,0 +1,43 @@
+.event-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 4px;
+    margin-top: 2px;
+  }
+  
+  .fc-event {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    font-size: 12px;
+    justify-content: center; /* Center align dots */
+  }
+  
+  .fc-daygrid-day-number {
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  .fc-daygrid-day {
+    position: relative;
+  }
+  
+  .fc-daygrid-day-top {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .event-amount {
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    color: black;
+  }
+  
+  .total {
+    font-weight: bold;
+    margin-top: 4px;
+  }
+  

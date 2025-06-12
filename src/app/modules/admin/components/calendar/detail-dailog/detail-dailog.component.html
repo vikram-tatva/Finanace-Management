@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>Details for {{ data.date }}</h1>
+<div mat-dialog-content>
+  <h2>Incomes</h2>
+  <ul>
+    @for (income of data.incomes; track $index) {
+
+      <li>
+        {{ income.date }}: ${{ income.amount }}
+      </li>
+    }
+  </ul>
+  <h2>Expenses</h2>
+  <ul>
+    @for (expense of data.expenses; track $index) {
+
+      <li>
+        {{ expense.date }}: ${{ expense.amount }}
+      </li>
+    }
+  </ul>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div>

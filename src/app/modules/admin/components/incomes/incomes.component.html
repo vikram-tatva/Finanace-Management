@@ -1,0 +1,73 @@
+<div class="main-container container my-5 p-4 shadow-sm bg-white rounded">
+  <form [formGroup]="incomeForm" (ngSubmit)="onSubmit()">
+    <div class="form-group mb-4">
+      <label for="date" class="form-label h4">Date</label>
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Choose  Date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="date" id="date" />
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="isControlInvalid('date')">Date is required.</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group mb-4">
+      <label for="account" class="form-label h4">Account</label>
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Accounts</mat-label>
+        <mat-select formControlName="account" id="account">
+
+            <mat-option *ngFor="let option of paymentTypes" [value]="option.id">{{ option.name }}</mat-option>
+          
+        </mat-select>
+        <mat-error *ngIf="isControlInvalid('account')">Account type is required.</mat-error>
+      </mat-form-field>
+    </div>
+    
+    <div class="row">
+      <div class="col form-group mb-4">
+        <label for="category" class="form-label h4">Category</label>
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Category</mat-label>
+          <mat-select formControlName="category" id="category">
+            @if (Incomecategories?.length>0) {
+
+              <mat-option *ngFor="let option of Incomecategories" [value]="option.id">{{ option.name }}</mat-option>
+            }@else {
+              <mat-option disabled>No Category Found</mat-option>
+              
+            }
+            </mat-select>
+          <mat-error *ngIf="isControlInvalid('category')">Category is required.</mat-error>
+        </mat-form-field>
+      </div>
+    
+
+      <div class="col form-group mb-4">
+        <label for="amount" class="form-label h4">Amount</label>
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Amount</mat-label>
+          <input matInput type="number" formControlName="amount" id="amount" />
+          <mat-error *ngIf="isControlInvalid('amount')">Amount is required.</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <button mat-raised-button color="primary" type="submit" class="px-5" [disabled]="incomeForm.invalid">Submit</button>
+      <button
+      mat-raised-button
+      type="button"
+      class="px-5"
+      (click)="onCancel()"
+    >
+      Cancel
+    </button>
+    </div>
+  </form>
+</div>
+<div class="line-progress-bar" [class.show-progress]="showLinebar" [class.hide-progress]="!showLinebar"></div>
+<div class="loader-container" *ngIf="isLoading">
+    <div class="loader">
+    </div>
+</div>
