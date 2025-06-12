@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import Clarity from '@microsoft/clarity';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,11 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'financeManagementProject';
+  title = 'Finance-Management';
+
+  ngOnInit(): void{
+    const projectId = "rya5c3o3nm";
+    Clarity.init(projectId);
+    console.log("Project Id : "+ projectId );
+  }
 }

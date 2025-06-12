@@ -9,6 +9,7 @@ import { Registration, User } from '../../../../common/models/expenses.model';
 import { ForgotPasswordDialogComponent } from '../forgot-password-dialog/forgot-password-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { response } from 'express';
+import Clarity from '@microsoft/clarity';
 
 @Component({
   selector: 'app-login',
@@ -45,7 +46,9 @@ export class LoginComponent {
           const user = register.find(user => user.email === email && user.password === password);
           if (user) {
             var date = new Date();
-            console.log(user.id +' '+ date.toLocaleString());
+            var customUserId = user.id +' '+ date.toLocaleString();
+            console.log(customUserId);
+            Clarity.identify(customUserId);
             const loggedInUser = new User(email, user.id, user.firstName, user.Lastname);
             localStorage.setItem("user", JSON.stringify(loggedInUser));
             this.snackBar.open('Login Successful', 'Close', { duration: 3000 });
