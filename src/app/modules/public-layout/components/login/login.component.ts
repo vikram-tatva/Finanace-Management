@@ -45,10 +45,12 @@ export class LoginComponent {
         next: (register: Registration[]) => {
           const user = register.find(user => user.email === email && user.password === password);
           if (user) {
+            //Add custome user id
             var date = new Date();
-            var customUserId = user.id +' '+ date.toLocaleString();
-            console.log(customUserId);
-            Clarity.identify(customUserId);
+            var customUserId = user.id+ '-' + date.toLocaleDateString() + '-' + date.toLocaleTimeString();
+            console.log(customUserId.toString());
+            Clarity.identify(customUserId.toString(), date.toLocaleString().toString());
+
             const loggedInUser = new User(email, user.id, user.firstName, user.Lastname);
             localStorage.setItem("user", JSON.stringify(loggedInUser));
             this.snackBar.open('Login Successful', 'Close', { duration: 3000 });

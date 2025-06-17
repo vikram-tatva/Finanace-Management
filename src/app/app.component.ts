@@ -13,7 +13,9 @@ export class AppComponent {
   title = 'Finance-Management';
 
   ngOnInit(): void{
-    const projectId = "ryc4t2c4uf";
+
+    //Clarity Project Initialization
+    const projectId = "s0s4y7yzwp";
     Clarity.init(projectId);
     console.log("Project Id : "+ projectId );
   }

@@ -22,6 +22,7 @@ import {
   NgxSkeletonLoaderComponent,
   NgxSkeletonLoaderModule,
 } from 'ngx-skeleton-loader';
+import Clarity from '@microsoft/clarity';
 
 Chart.register(...registerables);
 
@@ -99,6 +100,9 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    //Add Clarity Tag
+    Clarity.setTag('Module','Dashboard');
+    
     // Retrieve user information from localStorage
     const userString = localStorage.getItem('user');
     if (userString) {

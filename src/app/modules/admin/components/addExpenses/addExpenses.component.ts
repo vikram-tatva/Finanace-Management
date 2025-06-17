@@ -3,6 +3,7 @@ import {
   ChangeDetectorRef,
   Component,
   ElementRef,
+  EnvironmentInjector,
   OnInit,
   SimpleChanges,
   ViewChild,
@@ -33,6 +34,7 @@ import { Subscription } from 'rxjs';
 import { IncomesComponent } from '../incomes/incomes.component';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { DailogService } from '../../../../common/services/dailog.service';
+import Clarity from '@microsoft/clarity';
 
 @Component({
   selector: 'app-addExpenses',
@@ -202,6 +204,12 @@ export class AddExpensesComponent implements OnInit {
         this.snackBar.open('Expense successfully added', 'Close', {
           duration: 3000,
         });
+
+        //Event Add to Clarity
+        
+        Clarity.event('Expense_added');
+        console.log('Add Custome Event');
+
         setTimeout(() => {
           this.isLoading = false;
         }, 3000);
